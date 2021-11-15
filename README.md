@@ -12,7 +12,7 @@ mvn test
 ```
 Below HTML reports can be seen at target/cucumber folder.
 
-![Screenshot](SampleReport.png)
+![Screenshot](SampleReport.PNG)
 
 **Future Scopes / Improvement**
 - Add remaining test cases in automation for Compose feature
