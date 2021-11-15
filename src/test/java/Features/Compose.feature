@@ -7,3 +7,4 @@ Feature: Compose functionality
     And Refreshes the mail list
     Then Verify that last received email is from "Vaibhav Vora" and has subject "Incubyte" and body "Automation QA test for Incubyte"
     And Delete the opened mail
+    And User closes the browser
