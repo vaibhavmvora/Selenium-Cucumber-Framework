@@ -10,21 +10,16 @@ public class FrameworkVerifications {
 
     private static WebDriver driver;
 
-    public FrameworkVerifications(WebDriver driver)
-    {
-        this.driver=driver;
+    public FrameworkVerifications(WebDriver driver) {
+        this.driver = driver;
     }
 
-    public void verifyText(WebElement element,String expectedText)
-    {
-        try
-        {
-            WebDriverWait wait = new WebDriverWait(driver,30);
+    public void verifyText(WebElement element, String expectedText) {
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, 30);
             wait.until(ExpectedConditions.visibilityOf(element));
-            Assert.assertEquals(expectedText,element.getText());
-        }
-        catch (Exception e)
-        {
+            Assert.assertEquals(expectedText, element.getText());
+        } catch (Exception e) {
             System.out.println(e.toString());
         }
     }

@@ -12,7 +12,7 @@ public class NewMessagePage {
     WebDriver driver;
 
     public NewMessagePage(WebDriver driver) {
-        this.driver=driver;
+        this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
@@ -29,12 +29,11 @@ public class NewMessagePage {
     private WebElement btn_Send;
 
 
-    public void sendMail(String subject, String body, String To)
-    {
+    public void sendMail(String subject, String body, String To) {
         FrameworkActions actions = new FrameworkActions(driver);
-        actions.sendKeys(txt_To,To);
-        actions.sendKeys(txt_Subject,subject);
-        actions.sendKeys(txt_Body,body);
+        actions.sendKeys(txt_To, To);
+        actions.sendKeys(txt_Subject, subject);
+        actions.sendKeys(txt_Body, body);
         actions.click(btn_Send);
     }
 

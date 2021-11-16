@@ -13,7 +13,7 @@ public class MailDetailsPage {
     WebDriver driver;
 
     public MailDetailsPage(WebDriver driver) {
-        this.driver=driver;
+        this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
@@ -29,16 +29,14 @@ public class MailDetailsPage {
     @FindBy(how = How.XPATH, using = "//div[@aria-label='Delete']")
     private WebElement btn_Delete;
 
-    public void verifyMailDetails(String from, String subject, String body)
-    {
+    public void verifyMailDetails(String from, String subject, String body) {
         FrameworkVerifications verifications = new FrameworkVerifications(driver);
-        verifications.verifyText(lbl_From,from);
-        verifications.verifyText(lbl_Subject,subject);
-        verifications.verifyText(lbl_Body,body);
+        verifications.verifyText(lbl_From, from);
+        verifications.verifyText(lbl_Subject, subject);
+        verifications.verifyText(lbl_Body, body);
     }
 
-    public void deleteEmail()
-    {
+    public void deleteEmail() {
         FrameworkActions actions = new FrameworkActions(driver);
         actions.click(btn_Delete);
     }

@@ -16,7 +16,7 @@ public class HomePage {
     WebDriver driver;
 
     public HomePage(WebDriver driver) {
-        this.driver=driver;
+        this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
@@ -33,28 +33,24 @@ public class HomePage {
     private WebElement btn_Refresh;
 
 
-    public void clickOnCompose()
-    {
+    public void clickOnCompose() {
         FrameworkActions actions = new FrameworkActions(driver);
         actions.click(btn_Compose);
     }
 
-    public void signOut()
-    {
+    public void signOut() {
         FrameworkActions actions = new FrameworkActions(driver);
         actions.click(btn_UserProfile);
         actions.click(btn_SignOut);
     }
 
-    public void openLastEmail()
-    {
+    public void openLastEmail() {
         FrameworkActions actions = new FrameworkActions(driver);
         List<WebElement> rows = driver.findElements(By.xpath("//div[@class='UI']//table/tbody/tr"));
         actions.click(rows.get(0));
     }
 
-    public void refresh()
-    {
+    public void refresh() {
         FrameworkActions actions = new FrameworkActions(driver);
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         actions.click(btn_Refresh);
